@@ -1,19 +1,30 @@
 import { Title } from "solid-start";
-import Counter from "~/components/Counter";
 
 export default function Home() {
   return (
     <main>
-      <Title>Hello World</Title>
-      <h1>Hello world!</h1>
-      <Counter />
-      <p>
-        Visit{" "}
-        <a href="https://start.solidjs.com" target="_blank">
-          start.solidjs.com
-        </a>{" "}
-        to learn how to build SolidStart apps.
-      </p>
+      <Title>Discover Client Insights</Title>
+      <gen-search-widget
+        configId="e87290e1-397b-4a9d-87d6-57d94359299f"
+        location="us"
+        triggerId="searchWidgetTrigger">
+      </gen-search-widget>
+
+     
+<div class="wrapper">
+  <div class="container">
+    <div class="flexbox">
+      <div class="search">
+        <h1>Discover Client Insights</h1>
+        <h3> Click on search icon, prompt what you want to know about a client <span class="blinking-cursor"> |</span></h3>
+        <div>
+          <input type="text" id="searchWidgetTrigger" placeholder="Discover . . ."  />
+        </div>
+      </div>
+      <div id="facet_results"></div>
+    </div>
+   </div>
+</div>
     </main>
   );
 }
